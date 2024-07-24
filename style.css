@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --back-color : #FDF5DF;
+    --prime-color : #5EBEC4;
+    --second-color : #F92C85;
+}
+
+body{
+    background-color: var(--back-color);
+    color: var(--prime-color);
+    min-height: 100vh;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+/* ----------NAVIGATION----------- */
+
+nav{
+    /* border-bottom: 2px dashed var(--second-color); */
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li{
+    height: 50px;
+}
+
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: var(--prime-color);
+}
+
+nav a:hover{
+    color: var(--second-color);
+    text-decoration: underline;
+}
+
+nav li:first-child{
+    margin-right: auto;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: var(--back-color);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.5);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li{
+    width: 100%;
+}
+
+.sidebar a{
+    width: 100%;
+}
+
+.menu-button{
+    display: none;
+}
+
+@media (max-width:800px) {
+    .hideOnMobile{
+        display: none;
+    }
+    .menu-button{
+        display: block;
+    }
+}
+@media (max-width:400px) {
+    .sidebar{
+        width: 100%;
+    }
+}
+
+
+/* -----------Hero Section----------- */
+
+.container{
+    /* height: 90vh; */
+    padding: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.container img{
+    width: 500px;
+    height: 500px;
+    border-radius: 100px;
+    border: 2px dashed var(--second-color);
+}
+
+.hero-text{
+    width: 100%;
+}
+
+.hero-text h1{
+    font-size: 3.3rem;
+    margin-bottom: 8px;
+}
+
+.hero-text h5{
+    font-size: 2rem;
+    margin-bottom: 8px;
+    color: var(--second-color);
+}
+
+.hero-text h3{
+    font-size: 4.5rem;
+    margin-bottom: 8px;
+    letter-spacing: 5px;
+    /* display: inline-block; */
+}
+
+.hero-text p{
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+    letter-spacing: 7px;
+    /* display: inline-block; */
+    border-right: 5px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2s infinite, cursor .4s infinite;
+}
+
+@keyframes cursor {
+    50% {border-color: transparent;}
+}
+
+@keyframes typing {
+    from {width: 0;}
+}
+
+.hero-text span{
+    color: var(--second-color);
+}
+
+.hero-text button{
+    padding: 1em 2.1em 1.1em;
+    border-radius: 5px;
+    margin: 8px;
+    border: 1px solid var(--second-color);
+    background: var(--second-color);
+    color: var(--back-color);
+    font-size: large;
+    transition: .5s ease;
+
+    &:hover{
+        background: var(--back-color);
+        color: var(--prime-color);
+        cursor: pointer;
+    }
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.buttons a{
+    /* border: 1px solid var(--second-color); */
+    /* border-radius: 5px; */
+    padding: 5px;
+    font-size: 30px;
+    background: var(--back-color);
+    color: var(--second-color);
+
+    &:hover{
+        background: var(--back-color);
+        color: var(--prime-color);
+        cursor: pointer;
+    }
+}
+
+@media (max-width:920px) {
+    .container{
+        margin-top: 10px;
+        flex-direction: column;
+    }
+    .hero-text{
+        width: 100%;
+        text-align: center;
+    }
+    .hero-text h1{
+        font-size: 2.5rem;
+    }
+    
+}
+@media (max-width:500px) {
+    .container img{
+        width: 80%;
+        height: 350px;
+    }
+    .hero-text h3{
+        letter-spacing: 3px;
+        font-size: 3rem;
+    }
+    .hero-text h1{
+        font-size: 1.5rem;
+    }
+}
+
+/* -------------About Section-------------- */
+
+.contain{
+    margin-top: 60px;
+
+}
+
+.contain h1{
+    margin-bottom: 30px;
+    letter-spacing: 5px;
+    font-size: 3.3rem;
+    text-align: center;
+}
+
+.Aheading{
+    position: relative;
+}
+
+.Aheading::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    background: var(--second-color);
+    bottom: -6px;
+    left: 0;
+}
+
+.details{
+    display: flex;
+    width: 100%;
+
+}
+.study{
+    width: 50%;
+}
+
+.skills{
+    width: 50%;
+}
+
+
