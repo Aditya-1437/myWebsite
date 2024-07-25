@@ -1,8 +1,57 @@
+@media screen and (max-width:1400px) {
+    #profile{
+        height: 83vh;
+        margin-bottom: 6rem;
+    }
+    .about-container{
+        flex-wrap: wrap;
+    }
+    
+    /* .form-container{
+        flex-wrap: wrap;
+    }*/
+    
+}
+
 @media screen and (max-width:1200px) {
     #desktop-nav{
         display: none;
     }
     #mobile-nav{
         display: flex;
+    }
+    .experience-detail-container{
+        margin-top: 2rem;
+    }
+    #profile,.container{
+        display: block;
+    }
+    section, .container{
+        height: fit-content;
+    }
+    section{
+        margin: 0 5%;
+    }
+    .project-container{
+        flex-wrap: wrap;
+    }
+    .sub-one{
+        flex-wrap: wrap;
+    } 
+    .text{
+        margin-top: 1rem;
+    }
+    /* .pic-container{
+        width: 275px;
+        height: 275px;
+    } */
+}
+
+@media screen and (max-width:900px) {
+    .arrowu,.arrowd{
+        display: none;
+    }
+    .send-btn{
+        width: 50%;
     }
 }
