@@ -131,15 +131,16 @@
     <section id="contact">
         <p class="p1">Let me Know</p>
         <h1 class="title">Contact Me</h1>
-        <form action="">
+        <form action="https://api.web3forms.com/submit" method="POST">
             <div class="form-container">
+                <input type="hidden" name="access_key" value="d161ac49-a358-4684-a361-cc5cb6d98e1b">
                 <div class="sub-one">
-                    <input type="text" placeholder="Your Name..." class="i1">
-                    <input type="text" placeholder="Mobile No..." class="i2">
+                    <input name="name" type="text" id="name" placeholder="Your Name..." class="i1">
+                    <input name="mobile" type="text" id="mobile" placeholder="Mobile No..." class="i2">
                 </div>
-                <input type="email" placeholder="Your Email..." class="mail">
+                <input name="mail" type="email" id="email" placeholder="Your Email..." class="mail">
                 
-                <textarea name="" id="" class="textArea" placeholder="message"></textarea>
+                <textarea name="text" id="message" class="textArea" placeholder="message"></textarea>
                 
                 <button class="btn btn-color-2 send-btn">Send Message</button>
             </div>
@@ -151,6 +152,7 @@
     </section>
 
 
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
